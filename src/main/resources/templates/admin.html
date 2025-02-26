@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - User Management</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex flex-col min-h-screen">
+
+<!-- Navbar -->
+<nav class="bg-gray-900 p-4 shadow-md fixed w-full top-0 left-0 z-50">
+    <div class="container mx-auto flex justify-between items-center">
+        <a class="text-white text-lg font-semibold" href="#">Admin Dashboard</a>
+        <div class="flex items-center space-x-4">
+            <a href="#" class="text-white">Home</a>
+            <a href="#" class="text-white">Users</a>
+            <a href="#" class="text-white">Settings</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Main content -->
+<div class="container mx-auto mt-20 p-4 flex-grow">
+    <div class="flex justify-between items-center mb-6">
+        <h2 class="text-2xl font-bold text-gray-800">User Management</h2>
+        <!-- Search Bar -->
+        <div class="w-1/3">
+            <input type="text" id="searchInput" class="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Search users...">
+        </div>
+    </div>
+
+    <!-- User Table -->
+    <div class="overflow-x-auto bg-white shadow-lg rounded-lg">
+        <table class="min-w-full table-auto text-left text-sm text-gray-700">
+            <thead class="bg-gray-200">
+            <tr>
+                <th class="px-4 py-2 font-semibold">#</th>
+                <th class="px-4 py-2 font-semibold">Username</th>
+                <th class="px-4 py-2 font-semibold">Email</th>
+                <th class="px-4 py-2 font-semibold">Full Name</th>
+                <th class="px-4 py-2 font-semibold">Phone Number</th>
+                <th class="px-4 py-2 font-semibold">Address</th>
+                <th class="px-4 py-2 font-semibold">Date of Birth</th>
+                <th class="px-4 py-2 font-semibold">Active</th>
+                <th class="px-4 py-2 font-semibold">Role</th>
+                <th class="px-4 py-2 font-semibold">Actions</th>
+            </tr>
+            </thead>
+            <tbody id="userTableBody">
+            <!-- Example data -->
+            <tr class="border-b">
+                <td class="px-4 py-2">1</td>
+                <td class="px-4 py-2">johndoe</td>
+                <td class="px-4 py-2">johndoe@example.com</td>
+                <td class="px-4 py-2">John Doe</td>
+                <td class="px-4 py-2">123-456-7890</td>
+                <td class="px-4 py-2">123 Main St, Springfield</td>
+                <td class="px-4 py-2">1985-05-15</td>
+                <td class="px-4 py-2">Active</td>
+                <td class="px-4 py-2">Admin</td>
+                <td class="px-4 py-2">
+                    <button class="bg-yellow-500 text-white px-4 py-2 rounded-md hover:bg-yellow-600 transition">Edit</button>
+                    <button class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 transition">Delete</button>
+                </td>
+            </tr>
+            <tr class="border-b">
+                <td class="px-4 py-2">2</td>
+                <td class="px-4 py-2">janesmith</td>
+                <td class="px-4 py-2">janesmith@example.com</td>
+                <td class="px-4 py-2">Jane Smith</td>
+                <td class="px-4 py-2">987-654-3210</td>
+                <td class="px-4 py-2">456 Oak St, Metropolis</td>
+                <td class="px-4 py-2">1990-08-22</td>
+                <td class="px-4 py-2">Inactive</td>
+                <td class="px-4 py-2">User</td>
+                <td class="px-4 py-2">
+                    <button class="bg-yellow-500 text-white px-4 py-2 rounded-md hover:bg-yellow-600 transition">Edit</button>
+                    <button class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 transition">Delete</button>
+                </td>
+            </tr>
+            <!-- Additional rows... -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="text-center p-4 bg-gray-200 mt-auto">
+    <small>© 2023 Admin Dashboard</small>
+</div>
+
+<!-- Search Functionality -->
+<script src="./js/memberSearch.js">
+</script>
+
+</body>
+</html>
